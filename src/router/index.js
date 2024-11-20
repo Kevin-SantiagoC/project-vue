@@ -1,5 +1,12 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+
+
+import Comunas from '../views/Comunas';
+import Municipios from '../views/Municipios';
+import Departamentos from '../views/Departamentos';
+import Paises from '../views/Paises';
+
+import HomeView from '../views/HomeView.vue';
 
 const routes = [
   {
@@ -7,6 +14,32 @@ const routes = [
     name: 'home',
     component: HomeView
   },
+
+  {
+    path: '/comunas',
+    name: 'Comunas',
+    component: Comunas
+  },
+
+  {
+    path: '/municipios',
+    name: 'Municipios',
+    component: Municipios
+  },
+
+  {
+    path: '/departamentos',
+    name: 'Departamentos',
+    component: Departamentos
+  },
+  
+  {
+    path: '/paises',
+    name: 'Paises',
+    component: Paises
+  },
+
+
   {
     path: '/about',
     name: 'about',
