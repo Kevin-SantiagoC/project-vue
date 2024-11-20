@@ -1,10 +1,23 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router';
 
 
 import Comunas from '../views/Comunas';
+import EditarComuna from '../components/Comuna/EditarComuna';
+import NewComuna from '../components/Comuna/NewComuna';
+
+
+
 import Municipios from '../views/Municipios';
+import EditarMunicipio from '../components/Municipio/EditarMunicipio.vue';
+import NewMunicipio from '../components/Municipio/NewMunicipio.vue';
+
 import Departamentos from '../views/Departamentos';
+import EditarDepartamento from '../components/Departamento/EditarDepartamento.vue';
+import NewDepartamento from '../components/Departamento/NewDepartamento.vue';
+
 import Paises from '../views/Paises';
+import EditarPais from '../components/Pais/EditarPais.vue';
+import NewPais from '../components/Pais/NewPais.vue';
 
 import HomeView from '../views/HomeView.vue';
 
@@ -22,9 +35,32 @@ const routes = [
   },
 
   {
+    path: '/editar-comuna/:id',
+    name: 'EditarComuna',
+    component: EditarComuna
+  },
+
+  {
+    path: '/add-comuna/',
+    name: 'NewComuna',
+    component: NewComuna
+  },
+
+  {
     path: '/municipios',
     name: 'Municipios',
     component: Municipios
+  },
+
+  {
+    path: '/editar-municipio/:id',
+    name: 'EditarMunicipio',
+    component: EditarMunicipio
+  },
+  {
+    path: '/add-municipio/',
+    name: 'NewMunicipio',
+    component: NewMunicipio
   },
 
   {
@@ -32,11 +68,33 @@ const routes = [
     name: 'Departamentos',
     component: Departamentos
   },
+
+  {
+    path: '/editar-departamento/:id',
+    name: 'EditarDepartamento',
+    component: EditarDepartamento
+  },
+  {
+    path: '/add-departamento/',
+    name: 'NewDepartamento',
+    component: NewDepartamento
+  },
   
   {
     path: '/paises',
     name: 'Paises',
     component: Paises
+  },
+
+  {
+    path: '/editar-pais/:id',
+    name: 'EditarPais',
+    component: EditarPais
+  },
+  {
+    path: '/add-pais/',
+    name: 'NewPais',
+    component: NewPais
   },
 
 
